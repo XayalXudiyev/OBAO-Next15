@@ -9,7 +9,7 @@ const Logo = () => {
   const router = useRouter()
   return (
     <Button
-      className="flex items-center gap-1 lg:gap-5  p-0 m-0 bg-transparent border-none cursor-pointer "
+      className="flex items-center gap-1 lg:gap-5  p-0 m-0 bg-transparent hover:bg-transparent border-none cursor-pointer "
       onClick={() => router.push("/")}
       type="button"
     >

@@ -46,9 +46,8 @@ const FoodMenuPage = () => {
 
   return (
     <div className="relative flex bg-[#1C1C1C]">
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('/cropped.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity-10 z-10">
-        {" "}
-      </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('/cropped.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity-10 z-10" />
+     
 
       <div className="z-20 text-white  flex flex-col justify-center items-center w-full relative">
         <Image
@@ -56,10 +55,10 @@ const FoodMenuPage = () => {
           height={1}
           src="/menuHero.svg"
           alt="menuHero"
-          className="w-full px-48 py-28"
+          className="w-full py-10 px-3 md:px-48 md:py-28"
         />
 
-        <div className="border-[1px] border-y-[#634927] border-x-0 w-full flex items-center justify-center gap-10">
+        <div className="border-[1px] border-y-[#634927] border-x-0 w-full flex items-center justify-start  md:justify-center overflow-auto gap-3 pl-2 md:pl-0 md:gap-10">
           {categories.map((category) => (
             <Button
               key={category.id}
@@ -75,7 +74,7 @@ const FoodMenuPage = () => {
         </div>
 
         <div className="w-full">
-          <h2 className="text-4xl font-bold font-avenirMedium4 text-center w-full mt-20 mb-10">
+          <h2 className="text-4xl font-bold font-avenirMedium4 text-center w-full mt-10 md:mt-20 mb-5 md:mb-10">
             OUR OFFERINGS
           </h2>
           {[1, 2, 3, 4].map((_, index) => (

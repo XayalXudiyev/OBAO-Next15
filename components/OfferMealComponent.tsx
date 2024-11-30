@@ -57,15 +57,15 @@ const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
                   className="flex w-full justify-between items-center mb-4"
                 >
                   <div>
-                    <h3 className="text-2xl md:text-lg">
+                    <h3 className="text-lg">
                       <span className="text-[#FB4444]">{index + 1}.</span>{" "}
                       Yakutori Poulet
                     </h3>
-                    <p className="text-lg md:text-sm text-[#FFFFFFB2]">
+                    <p className="text-sm text-[#FFFFFFB2]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                   </div>
-                  <div className="text-2xl md:text-lg">17$</div>
+                  <div className="text-lg">17$</div>
                 </div>
               ))}
             </CarouselItem>
@@ -80,7 +80,7 @@ const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
                       <span className="text-[#FB4444]">{index + 1}.</span>{" "}
                       Yakutori Poulet
                     </h3>
-                    <p className="text-lg md:text-sm text-[#FFFFFFB2]">
+                    <p className="text-sm text-[#FFFFFFB2]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                   </div>

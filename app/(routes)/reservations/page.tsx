@@ -50,10 +50,10 @@ const ReservationsPage = () => {
           <h1 className="text-[#FB4444] text-4xl font-bold font-avenirMedium4 ">
             <span className="text-white">BOOK A</span> TABLE
           </h1>
-          <p className="text-white text-xl md:text-2xl leading-7 font-avenirRoman3 my-10">
+          <p className="text-white text-2xl leading-7 font-avenirRoman3 my-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
           </p>
-          <p className="text-white text-lg md:text-2xl leading-7 font-avenirRoman3">
+          <p className="text-white text-2xl leading-7 font-avenirRoman3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
             tellus pharetra, faucibus enim sit amet, ullamcorper est.{" "}
           </p>

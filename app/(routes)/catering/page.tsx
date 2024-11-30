@@ -14,9 +14,9 @@ const CateringPage = () => {
         height={1}
       />
       <div className="text-center py-10 md:py-16 space-y-5 px-5 md:px-0">
-        <p className="text-lg md:text-base">FEATURED</p>
+        <p className="text-base">FEATURED</p>
         <p className="text-4xl">THE CHEF'S <span className="text-[#FB4444]">VISION</span></p>
-        <p className="text-lg md:text-base">
+        <p className="text-base">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
           tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Duis in tellus pharetra,
@@ -30,10 +30,10 @@ const CateringPage = () => {
       <div className="w-full bg-[#D2B48C] pb-7 md:py-16 md:px-0">
         <div className=" flex items-center md:flex-row flex-col-reverse  md:w-[88%] md:h-96    ">
           <div className="space-y-3 md:space-y-4 md:container  px-5 md:px-0 text-center h-full md:bg-white flex flex-col justify-center md:text-start   ">
-            <p className="text-center md:text-start mt-4 md:mt-0 text-lg md:text-base">CULINARY PERFECTION</p>
+            <p className="text-center md:text-start mt-4 md:mt-0 text-base">CULINARY PERFECTION</p>
             <p className="text-4xl text-center md:text-start">OUR <span className="text-[#FB4444]">ROUTES </span>
             </p>
-            <p className="text-xl md:text-base">
+            <p className="text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
               tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
@@ -41,7 +41,7 @@ const CateringPage = () => {
               dolor sit amet, consectetur adipiscing elit. Duis in tellus
               pharetra, faucibus enim sit amet, ullamcorper est.
             </p>
-            <p className="text-xl md:text-base">
+            <p className="text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
               pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
@@ -62,7 +62,7 @@ const CateringPage = () => {
 
 
       <div className="text-center mt-7 md:mt-14 md:container">
-        <p className="text-center md:text-start mt-4 md:mt-0 text-lg md:text-base">CULINARY PERFECTION</p>
+        <p className="text-center md:text-start mt-4 md:mt-0 text-base">CULINARY PERFECTION</p>
         <p className="text-4xl mt-1 md:mt-0">WHAT DO WE <span className="text-[#FB4444]">CATER</span></p>
 
         <div className="grid md:grid-cols-3 w-full ">
@@ -83,9 +83,9 @@ const CateringPage = () => {
             className="w-full md:w-[402px]"
           />
           <div className="space-y-4 px-5 md:px-0 py-7 md:container h-full md:bg-white flex flex-col justify-center text-start  ">
-            <p className="text-center md:text-start text-lg md:text-base">LEARN ABOUT</p>
+            <p className="text-center md:text-start text-base">LEARN ABOUT</p>
             <p className="text-4xl text-center md:text-start">OUR <span className="text-[#FB4444]">SERVICES </span></p>
-            <p className="text-center md:text-start text-xl md:text-base">
+            <p className="text-center md:text-start text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
               tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
@@ -93,7 +93,7 @@ const CateringPage = () => {
               dolor sit amet, consectetur adipiscing elit. Duis in tellus
               pharetra, faucibus enim sit amet, ullamcorper est.
             </p>
-            <p className="text-center md:text-start text-xl md:text-base">
+            <p className="text-center md:text-start text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
               pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum

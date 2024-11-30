@@ -25,26 +25,26 @@ const RestaurantComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
       </div>
 
       <div className="basis-full md:basis-[36%] h-full text-center text-white">
-        <h1 className="text-4xl md:text-3xl  mb-5">Brussels</h1>
+        <h1 className="text-3xl  mb-5">Brussels</h1>
 
         <div className="mb-4">
-          <h3 className="text-2xl md:text-lg mb-1">ADDRESS</h3>
-          <p className="text-lg md:text-sm">Rue Stevin 110, B-1000 Brussels</p>
+          <h3 className="text-lg mb-1">ADDRESS</h3>
+          <p className="text-sm">Rue Stevin 110, B-1000 Brussels</p>
         </div>
 
         <div className="mb-4">
-          <h3 className="text-2xl md:text-lg mb-1">OPENING HOURS</h3>
+          <h3 className="text-lg mb-1">OPENING HOURS</h3>
           {openingHours.map((item, index) => (
-            <p key={index} className="text-lg md:text-sm mb-1">
+            <p key={index} className="text-sm mb-1">
               {item.day} - {item.hours}
             </p>
           ))}
         </div>
 
         <div className="">
-          <h3 className="text-2xl md:text-lg mb-1">CONTACT</h3>
-          <p className="text-lg md:text-sm mb-1">events@obao-catering.be</p>
-          <p className="text-lg md:text-sm">www.obao-catering.be</p>
+          <h3 className="text-lg mb-1">CONTACT</h3>
+          <p className="text-sm mb-1">events@obao-catering.be</p>
+          <p className="text-sm">www.obao-catering.be</p>
         </div>
       </div>
     </div>

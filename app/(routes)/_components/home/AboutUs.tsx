@@ -5,10 +5,10 @@ const AboutUsComponent = () => {
   return (
     <div className="bg-[#D2B48C] h-[25.7rem] mx-auto relative flex flex-col justify-center items-center">
       <div className="text-center  w-4/5  space-y-10 ">
-        <div className=" text-3xl md:text-4xl font-bold font-avenirMedium4">
+        <div className=" text-4xl font-bold font-avenirMedium4">
           ABOUT US
         </div>
-        <p className="text-xl md:text-2xl  leading-7 font-avenirRoman3">
+        <p className="text-2xl  leading-7 font-avenirRoman3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
           tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit

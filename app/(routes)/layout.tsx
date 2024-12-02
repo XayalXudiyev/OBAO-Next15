@@ -7,11 +7,11 @@ interface RoutesLayoutProps {
 
 const RoutesLayout = ({ children }: RoutesLayoutProps) => {
   return (
-    <>
+    <div className="bg-[#1C1C1C]">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

@@ -13,7 +13,7 @@ const Logo = () => {
       onClick={() => router.push("/")}
       type="button"
     >
-      <span className="text-[#FB4444]  xs:text-[20px] sm:text-xl  md:text-[24px] lg:text-[32px] font-avenirMedium4">
+      <span className="text-[#FB4444] text-xl  md:text-[24px] lg:text-[32px] font-avenirMedium4">
         O’BAO
       </span>
       <Image

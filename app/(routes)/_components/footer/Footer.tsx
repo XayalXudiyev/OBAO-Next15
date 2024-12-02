@@ -3,14 +3,14 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1C1C1C] w-full border-t border-[#634927] min-h-[76px] flex items-center justify-between">
-      <div className="flex items-center justify-between container mx-auto ">
-        <div className="flex justify-center items-center text-white font-avenirMedium4 text-sm">
+    <footer className="border-t border-[#634927] font-avenirMedium4 text-white ">
+      <div className="flex justify-between items-center px-5 sm:px-10 md:px-16 mx-auto  min-h-[76px]">
+       <div className="flex text-sm space-x-7">
           <p>Privacy policy</p>
-          <p className="ml-7">© 2024</p>
-          <p className="ml-3">O’BAO</p>
+          <p>© 2024</p>
+          <p>O’BAO</p>
         </div>
-        <div className="flex justify-center items-center gap-4 text-white text-xl">
+        <div className="flex gap-4 text-xl">
           <FaFacebookF />
           <FaInstagram />
         </div>
@@ -20,3 +20,8 @@ const Footer = () => {
 }
 
 export default Footer
+
+
+
+
+  

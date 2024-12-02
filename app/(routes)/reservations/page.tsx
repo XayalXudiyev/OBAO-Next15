@@ -23,7 +23,6 @@ const ReservationsPage = () => {
   const [adultCount, setAdultCount] = useState(1)
   const [selectedTime, setSelectedTime] = useState<string | undefined>("")
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
-  const [_, setIsModalOpen] = useState(false)
 
   const increment = (
     setter: React.Dispatch<React.SetStateAction<number>>,
@@ -42,24 +41,24 @@ const ReservationsPage = () => {
   }
 
   return (
-    <div className="bg-[#1C1C1C] flex md:container mx-auto  relative">
+    <div className="relative flex bg-[#1C1C1C] items-center justify-center min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/cropped.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity-10 z-10" />
 
-      <div className="z-20 flex flex-col md:flex-row mb-10 md:mb-44 px-5 md:mx-0 ">
-        <div className="md:w-2/3 mt-10 md:mt-20 text-center md:text-start">
-          <h1 className="text-[#FB4444] text-4xl font-bold font-avenirMedium4 ">
-            <span className="text-white">BOOK A</span> TABLE
+      <div className="z-20 flex flex-col md:flex-row mb-10 md:mb-44 px-5 sm:px-10 md:px-16 mx-auto md:mx-0">
+        <div className="md:w-2/3 mt-10 md:mt-20 text-center md:text-start text-white font-avenirRoman3 text-xl ">
+          <h1 className="text-4xl font-avenirMedium4 ">
+           BOOK A <span className="text-[#FB4444] ">TABLE</span> 
           </h1>
-          <p className="text-white text-2xl leading-7 font-avenirRoman3 my-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+          <p className="leading-7 my-10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <p className="text-white text-2xl leading-7 font-avenirRoman3">
+          <p className="leading-7">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
-            tellus pharetra, faucibus enim sit amet, ullamcorper est.{" "}
+            tellus pharetra, faucibus enim sit amet, ullamcorper est.
           </p>
         </div>
 
-        <div className="md:w-1/3 border-2  border-[#D2B48C] mt-10 md:mt-20 p-10">
+        <div className="md:w-1/3 border-2  border-[#D2B48C] mt-10 md:mt-20 px-4 py-6 md:p-10">
           <h3 className="text-white text-2xl font-bold font-avenirMedium4 text-center ">
             Find a table
           </h3>
@@ -118,7 +117,6 @@ const ReservationsPage = () => {
             </div>
 
             <div className="flex flex-col gap-1 text-white">
-              {" "}
               {/* time */}
               <div className="flex items-center gap-2 justify-between">
                 <Select onValueChange={(value) => setSelectedTime(value)}>
@@ -197,7 +195,7 @@ const ReservationsPage = () => {
                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                      &nbsp; &nbsp; &nbsp; 
+                      &nbsp; &nbsp; &nbsp; &nbsp; 
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-4  border-none outline-none">

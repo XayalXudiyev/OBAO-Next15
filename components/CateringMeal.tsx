@@ -12,7 +12,7 @@ const CateringMeal = () => {
         height={0}
       />
       <h3 className="text-xl  font-avenirHeavy5 py-3">BAO SANDWICHES</h3>
-      <p className="px-5 md:px-0 text-base">
+      <p className="px-5 md:px-1 text-base md:text-sm font-avenir1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
         pharetra, faucibus enim sit amet, ullamcorper est.{" "}
       </p>

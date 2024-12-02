@@ -5,7 +5,7 @@ import React from "react"
 
 const CateringPage = () => {
   return (
-    <div className="h-full">
+    <div className="h-full bg-white">
       <Image
         src="/cateringHero.svg"
         alt="Catering"
@@ -13,10 +13,10 @@ const CateringPage = () => {
         width={1}
         height={1}
       />
-      <div className="text-center py-10 md:py-16 space-y-5 px-5 md:px-0">
-        <p className="text-base">FEATURED</p>
-        <p className="text-4xl">THE CHEF'S <span className="text-[#FB4444]">VISION</span></p>
-        <p className="text-base">
+      <div className="text-center py-10 md:py-16 space-y-5 px-5 md:px-0 flex flex-col items-center">
+        <p className="text-lg">FEATURED</p>
+        <p className="text-[33px]">THE CHEF'S <span className="text-[#FB4444]">VISION</span></p>
+        <p className="text-base w-4/5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
           tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Duis in tellus pharetra,
@@ -27,13 +27,12 @@ const CateringPage = () => {
 
 
 
-      <div className="w-full bg-[#D2B48C] pb-7 md:py-16 md:px-0">
+      <div className="w-full bg-[#D2B48C] pb-7 md:py-16 md:x-0">
         <div className=" flex items-center md:flex-row flex-col-reverse  md:w-[88%] md:h-96    ">
-          <div className="space-y-3 md:space-y-4 md:container  px-5 md:px-0 text-center h-full md:bg-white flex flex-col justify-center md:text-start   ">
-            <p className="text-center md:text-start mt-4 md:mt-0 text-base">CULINARY PERFECTION</p>
-            <p className="text-4xl text-center md:text-start">OUR <span className="text-[#FB4444]">ROUTES </span>
-            </p>
-            <p className="text-base">
+          <div className="space-y-3 px-5 md:container  text-center h-full md:bg-white flex flex-col justify-center md:text-start   ">
+            <p className="text-center md:text-start mt-4 md:mt-0 text-lg">CULINARY PERFECTION</p>
+            <p className="text-[33px] text-center md:text-start">OUR <span className="text-[#FB4444]">ROUTES </span></p>
+            <p className="text-base md:text-sm font-avenirBook2 md:w-9/12 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
               tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
@@ -41,7 +40,7 @@ const CateringPage = () => {
               dolor sit amet, consectetur adipiscing elit. Duis in tellus
               pharetra, faucibus enim sit amet, ullamcorper est.
             </p>
-            <p className="text-base">
+            <p className="text-base md:text-sm font-avenirBook2 md:w-9/12 md:pt-3 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
               pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
@@ -62,8 +61,8 @@ const CateringPage = () => {
 
 
       <div className="text-center mt-7 md:mt-14 md:container">
-        <p className="text-center md:text-start mt-4 md:mt-0 text-base">CULINARY PERFECTION</p>
-        <p className="text-4xl mt-1 md:mt-0">WHAT DO WE <span className="text-[#FB4444]">CATER</span></p>
+        <p className="text-center font-avenirRoman3 mt-4  text-lg">CULINARY PERFECTION</p>
+        <p className="text-[33px] mt-1 md:mt-0">WHAT DO WE <span className="text-[#FB4444]">CATER</span></p>
 
         <div className="grid md:grid-cols-3 w-full ">
           <CateringMeal />
@@ -82,23 +81,14 @@ const CateringPage = () => {
             height={0}
             className="w-full md:w-[402px]"
           />
-          <div className="space-y-4 px-5 md:px-0 py-7 md:container h-full md:bg-white flex flex-col justify-center text-start  ">
-            <p className="text-center md:text-start text-base">LEARN ABOUT</p>
-            <p className="text-4xl text-center md:text-start">OUR <span className="text-[#FB4444]">SERVICES </span></p>
-            <p className="text-center md:text-start text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
-              tellus pharetra, faucibus enim sit amet, ullamcorper est. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
-              pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Duis in tellus
-              pharetra, faucibus enim sit amet, ullamcorper est.
-            </p>
-            <p className="text-center md:text-start text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Duis in tellus
-              pharetra, faucibus enim sit amet, ullamcorper est. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.
-            </p>
+          <div className="space-y-3 px-5 md:container w-full  text-center h-full md:bg-white flex flex-col justify-center md:text-start   ">
+            <p className="text-center md:text-start mt-4 md:mt-0 text-lg">LEARN ABOUT</p>
+            <p className="text-[33px] text-center md:text-start">OUR <span className="text-[#FB4444]">ROUTES </span></p>
+            <div className="text-sm font-avenir1 w-full md:w-10/12 text-start pb-7 px-5 md:px-0">
+              <p className="border-b border-black py-5">Catering</p>
+              <p className="border-b border-black py-5">Catering</p>
+              <p className="border-b border-black py-5">Catering</p>
+            </div>
           </div>
         </div>
       </div>

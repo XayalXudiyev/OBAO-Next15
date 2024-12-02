@@ -11,14 +11,13 @@ const MenuButton = () => {
   return (
     <div className="cursor-pointer bg-black p-3 flex items-center justify-center my-4 select-none">
       <SlMenu
-        className="text-[#D2B48C] text-xl sm:text-xl md:text-2xl lg:text-3xl"
+        className="text-[#D2B48C] text-xl md:text-2xl lg:text-3xl"
         onClick={() => setIsOpen(!isOpen)}
       />
 
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-black bg-[url('/menuBg.png')] bg-center bg-no-repeat transform ${
-          isOpen ? "" : "-translate-y-full"
-        } transition-transform duration-500`}
+        className={`fixed top-0 left-0 w-full h-full  bg-[url('/menuBg.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity- z-10 transform ${isOpen ? "" : "-translate-x-full"
+          } transition-transform duration-500`}
       >
         <div className="flex flex-col items-center justify-center min-h-screen text-white">
           <div className="w-full min-h-screen bg-[#1C1C1C] opacity-90 flex flex-col items-center justify-center">
@@ -38,10 +37,10 @@ const MenuButton = () => {
           </div>
         </div>
 
-        <div className="absolute top-5 right-16 bg-black p-3 flex items-center justify-center cursor-pointer">
+        <div className="absolute top-3 md:top-5 right-4 md:right-16 bg-black p-3 flex items-center justify-center cursor-pointer">
           <TfiClose
             size={24}
-            className="text-[#D2B48C]"
+            className="text-[#D2B48C] text-xl  md:text-2xl lg:text-3xl"
             onClick={() => setIsOpen(false)}
           />
         </div>

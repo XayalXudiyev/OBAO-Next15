@@ -33,12 +33,12 @@ const CateringForm = () => {
               htmlFor="firstName"
               className="text-sm font-medium text-white mb-2"
             >
-              *First name
+              * First name
             </label>
             <Input
               id="firstName"
               {...register("firstName", { required: "First name is required" })}
-              placeholder="Gunel"
+              placeholder="Name"
               className="text-[#4A4A4A] bg-transparent border-[#966F3B] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#966F3B]   focus-visible:ring-offset-0"
             />
             {errors.firstName && (
@@ -51,12 +51,12 @@ const CateringForm = () => {
               htmlFor="lastName"
               className="text-sm font-medium text-white mb-2"
             >
-              *Last name
+              Last name
             </label>
             <Input
               id="lastName"
               {...register("lastName", { required: "Last name is required" })}
-              placeholder="Novruzova"
+              placeholder="Last name"
               className="text-[#4A4A4A] bg-transparent border-[#966F3B] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#966F3B]   focus-visible:ring-offset-0"
             />
             {errors.lastName && (
@@ -69,13 +69,13 @@ const CateringForm = () => {
               htmlFor="email"
               className="text-sm font-medium text-white mb-2"
             >
-              *Email
+              * Email
             </label>
             <Input
               id="email"
               type="email"
               {...register("email", { required: "Email is required" })}
-              placeholder="Gunel"
+              placeholder="Email"
               className="text-[#4A4A4A] bg-transparent border-[#966F3B] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#966F3B]   focus-visible:ring-offset-0"
             />
             {errors.email && (
@@ -88,14 +88,14 @@ const CateringForm = () => {
               htmlFor="phoneNumber"
               className="text-sm font-medium text-white mb-2"
             >
-              *Phone number
+              * Phone number
             </label>
             <Input
               id="phoneNumber"
               {...register("phoneNumber", {
                 required: "Phone number is required",
               })}
-              placeholder="Gunel"
+              placeholder="Phone number"
               className="text-[#4A4A4A] bg-transparent border-[#966F3B] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#966F3B]   focus-visible:ring-offset-0"
             />
             {errors.phoneNumber && (

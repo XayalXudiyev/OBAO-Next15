@@ -3,7 +3,7 @@ import React from "react"
 
 const AboutUsComponent = () => {
   return (
-    <div className="bg-[#D2B48C] h-[25.7rem] mx-auto relative flex flex-col justify-center items-center">
+    <div id="about-us" className="bg-[#D2B48C] h-[25.7rem] mx-auto relative flex flex-col justify-center items-center">
       <div className="text-center  w-4/5  space-y-10 ">
         <div className="text-3xl md:text-4xl font-bold font-avenirMedium4">
           ABOUT US

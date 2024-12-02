@@ -70,7 +70,7 @@ const ReservationForm = () => {
                   {...register("firstName", {
                     required: "First name is required",
                   })}
-                  placeholder="Gunel"
+                  placeholder="First name"
                   className="text-[#4A4A4A] bg-transparent border-[#1C1C1C] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#1c1c1c]   focus-visible:ring-offset-0"
                 />
                 {errors.firstName && (
@@ -89,7 +89,7 @@ const ReservationForm = () => {
                   {...register("lastName", {
                     required: "Last name is required",
                   })}
-                  placeholder="Novruzova"
+                  placeholder="Last name"
                   className="text-[#4A4A4A] bg-transparent border-[#1C1C1C] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#1c1c1c]   focus-visible:ring-offset-0"
                 />
                 {errors.lastName && (
@@ -107,7 +107,7 @@ const ReservationForm = () => {
                   id="email"
                   type="email"
                   {...register("email", { required: "Email is required" })}
-                  placeholder="Gunel"
+                  placeholder="Email"
                   className="text-[#4A4A4A] bg-transparent border-[#1C1C1C] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#1c1c1c]   focus-visible:ring-offset-0"
                 />
                 {errors.email && (
@@ -124,7 +124,7 @@ const ReservationForm = () => {
                   {...register("phoneNumber", {
                     required: "Phone number is required",
                   })}
-                  placeholder="Gunel"
+                  placeholder="Phone number"
                   className="text-[#4A4A4A] bg-transparent border-[#1C1C1C] rounded-none outline-none ring-0 focus-visible:ring-0 focus:border-[#1c1c1c]   focus-visible:ring-offset-0"
                 />
                 {errors.phoneNumber && (

@@ -3,7 +3,7 @@ import React from "react"
 
 const HeroComponent = () => {
   return (
-    <div className="relative mx-auto  ">
+    <div className="relative mx-auto">
       <Image
         src="/hero.svg"
         alt="hero"

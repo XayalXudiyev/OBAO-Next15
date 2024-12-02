@@ -10,7 +10,7 @@ import Image from "next/image"
 
 const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
   return (
-    <div className="flex  px-16 flex-col items-center gap-6 md:gap-20 pt-4 md:pb-14 md:flex-row md:items-start">
+    <div className="flex  md:px-16 flex-col items-center gap-6 md:gap-20 pt-4 md:pb-14 md:flex-row md:items-start">
 
       <div
         className={`w-full md:w-1/2 ${!isImageLeft ? "md:order-2" : "md:order-1"}`}
@@ -24,28 +24,21 @@ const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
         />
       </div>
 
-      <div
-        className={`w-full md:w-1/2 text-3xl ${isImageLeft ? "md:order-2" : "md:order-1"
-          }`}
-      >
-        <div className="mb-5 flex items-center">
-          {isImageLeft && (
-            <div className="bg-[#FB4444] h-0 md:h-6 w-14 absolute right-0"> </div>
-          )}
+      <div className={`w-full px-5 md:px-0 md:w-1/2 text-3xl ${isImageLeft ? "md:order-2" : "md:order-1"}`}>
+        <div className="mb-5 flex items-center ">
+          {isImageLeft && (<div className="bg-[#FB4444] h- md:h-6 w-14 absolute right-0" />)}
 
-          <span className="text-2xl md:text-3xl  mb-2">DONBURI BOL a BASE DE RIZ</span>
-          {!isImageLeft && (
-            <div className="bg-[#FB4444] h-0 md:h-6 w-14 absolute left-0 "> </div>
-          )}
+          <span className="text-2xl md:text-3xl">DONBURI BOL a BASE DE RIZ</span>
+          {!isImageLeft && (<div className="bg-[#FB4444] h-0 md:h-6 w-14 absolute left-0" />)}
         </div>
 
         <Carousel
-          // opts={{ loop: true }}
-          // plugins={[
-          //   Autoplay({
-          //     delay: 2000,
-          //   }),
-          // ]}
+          opts={{ loop: true }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
           className="font-avenirBook2"
         >
           <CarouselContent>
@@ -89,10 +82,18 @@ const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
             </CarouselItem>
 
           </CarouselContent>
+          <CarouselPrevious
+            className="hidden md:block hover:text-[#BE935A] text-[#BE935A]  border-none hover:bg-transparent bg-transparent  -left-16 top-28  [&_svg]:size-16"
+
+          />
 
 
-          <CarouselPrevious className="hover:text-[#BE935A] text-[#BE935A] hover:bg-transparent bg-transparent border-none" />
-          <CarouselNext className="hidden md:block hover:text-[#BE935A] text-[#BE935A] hover:bg-transparent bg-transparent border-none" />
+          <CarouselNext
+            className="hidden md:block hover:text-[#BE935A] text-[#BE935A]  border-none hover:bg-transparent bg-transparent -right-16 top-28 [&_svg]:size-16"
+          />
+
+
+          {/*  */}
 
         </Carousel>
       </div>

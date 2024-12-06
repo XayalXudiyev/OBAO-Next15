@@ -1,8 +1,4 @@
-type RouteProps = {
-  id: number
-  href: string
-  title: string
-}
+import type { Category, RouteProps } from "./types"
 
 export const routes: RouteProps[] = [
   { id: 0, href: "/", title: "Home" },
@@ -11,23 +7,9 @@ export const routes: RouteProps[] = [
   { id: 3, href: "/#restaurants", title: "Restaurants" },
   { id: 4, href: "/catering", title: "Catering" },
 ]
- 
-export interface FormData {
-  firstName: string
-  lastName: string
-  email: string
-  phoneNumber: string
-  message: string
-}
-
-
-interface Category {
-  id: number
-  title: string
-}
 
 export const categories: Category[] = [
-  { 
+  {
     id: 1,
     title: "Big plates",
   },

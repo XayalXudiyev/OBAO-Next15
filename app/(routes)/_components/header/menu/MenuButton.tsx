@@ -16,8 +16,9 @@ const MenuButton = () => {
       />
 
       <div
-        className={`fixed top-0 left-0 w-full h-full  bg-[url('/menuBg.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity- z-10 transform ${isOpen ? "" : "-translate-x-full"
-          } transition-transform duration-500`}
+        className={`fixed top-0 left-0 w-full h-full  bg-[url('/menuBg.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity- z-10 transform ${
+          isOpen ? "" : "-translate-x-full"
+        } transition-transform duration-500`}
       >
         <div className="flex flex-col items-center justify-center min-h-screen text-white">
           <div className="w-full min-h-screen bg-[#1C1C1C] opacity-90 flex flex-col items-center justify-center">

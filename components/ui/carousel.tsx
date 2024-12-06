@@ -4,7 +4,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
-import { RiArrowLeftSLine  , RiArrowRightSLine} from "react-icons/ri";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
 
 import * as React from "react"
 
@@ -218,7 +218,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <RiArrowLeftSLine  />
+      <RiArrowLeftSLine />
       <span className="sr-only">Previous slide</span>
     </Button>
   )

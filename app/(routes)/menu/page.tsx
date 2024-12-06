@@ -1,6 +1,6 @@
 "use client"
 
-import OfferMealComponent from "@/components/OfferMealComponent"
+import OfferMealComponent from "@/app/(routes)/menu/_compnents/OfferMealComponent"
 import { Button } from "@/components/ui/button"
 import { categories } from "@/constans"
 import { cn } from "@/lib/utils"
@@ -8,8 +8,6 @@ import Image from "next/image"
 import React, { useState } from "react"
 
 const FoodMenuPage = () => {
-  
-
   const [clicked, setClicked] = useState<number>(1)
 
   const handleClick = (id: number) => {
@@ -19,7 +17,6 @@ const FoodMenuPage = () => {
   return (
     <div className="relative flex bg-[#1C1C1C]">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/cropped.png')] bg-center bg-[length:120%_auto]  bg-repeat-y opacity-10 z-10" />
-     
 
       <div className="z-20 text-white  flex flex-col justify-center items-center w-full relative">
         <Image

@@ -32,22 +32,6 @@ export default {
           "var(--font-avenir-black)",
           ...defaultTheme.fontFamily.sans,
         ],
-        // avenirOblique: [
-        //   "var(--font-avenir-oblique)",
-        //   ...defaultTheme.fontFamily.sans,
-        // ],
-        // avenirBookOblique: [
-        //   "var(--font-avenir-book-oblique)",
-        //   ...defaultTheme.fontFamily.sans,
-        // ],
-        // avenirHeavyOblique: [
-        //   "var(--font-avenir-heavy-oblique)",
-        //   ...defaultTheme.fontFamily.sans,
-        // ],
-        // avenirBlackOblique: [
-        //   "var(--font-avenir-black-oblique)",
-        //   ...defaultTheme.fontFamily.sans,
-        // ],
       },
       colors: {
         background: "hsl(var(--background))",

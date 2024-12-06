@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from "next/image"
+import React from "react"
 
 const openingHours = [
   { day: "Monday", hours: "12:00PM-15:00PM, 18:00PM-22:00PM" },
@@ -9,7 +9,7 @@ const openingHours = [
   { day: "Friday", hours: "12:00PM-15:00PM, 18:00PM-22:30PM" },
   { day: "Saturday", hours: "14:00PM-22:30PM" },
   { day: "Sunday", hours: "14:00PM-22:00PM" },
-];
+]
 
 const RestaurantComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
   return (
@@ -48,7 +48,7 @@ const RestaurantComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RestaurantComponent;
+export default RestaurantComponent

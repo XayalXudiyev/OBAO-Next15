@@ -1,3 +1,4 @@
+"use client"
 import {
   Carousel,
   CarouselContent,
@@ -5,14 +6,54 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import type { OfferMeal } from "@/constans/types"
+import axios from "axios"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
-const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
+const OfferMealComponent = ({
+  isImageLeft,
+  selectedCategory,
+}: { isImageLeft: boolean; selectedCategory: string }) => {
+  const [menu, setMenu] = useState<OfferMeal[]>([])
+
+  const getMeals = async () => {
+    try {
+      const response = await axios.get("/api/sheets")
+      const result = response.data
+
+      if (result?.data) {
+        const processedMenu = result.data.slice(1).map((item: any) => ({
+          id: item[0],
+          category: Number(item[1]), // Kateqoriyaya görə nömrə olaraq saxlayırıq
+          name: item[2],
+          description: item[3],
+          price: item[4],
+        }))
+
+        setMenu(processedMenu)
+      } else {
+        console.error("No data found in response")
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error)
+    }
+  }
+  console.log("data", menu)
+
+  useEffect(() => {
+    getMeals()
+  }, [])
+
+  const filteredMenu = menu.filter((meal) => meal.category === selectedCategory)
+
   return (
-    <div className="flex  md:px-16 flex-col items-center gap-6 md:gap-20 pt-4 md:pb-14 md:flex-row md:items-start">
+    <div className="flex md:px-16 flex-col items-center gap-6 md:gap-20 pt-4 md:pb-14 md:flex-row md:items-start">
       <div
-        className={`w-full md:w-1/2 ${!isImageLeft ? "md:order-2" : "md:order-1"}`}
+        className={`w-full md:w-1/2 ${
+          !isImageLeft ? "md:order-2" : "md:order-1"
+        }`}
       >
         <Image
           width={100}
@@ -24,9 +65,11 @@ const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
       </div>
 
       <div
-        className={`w-full px-5 md:px-0 md:w-1/2 text-3xl ${isImageLeft ? "md:order-2" : "md:order-1"}`}
+        className={`w-full px-5 md:px-0 md:w-1/2 text-3xl ${
+          isImageLeft ? "md:order-2" : "md:order-1"
+        }`}
       >
-        <div className="mb-5 flex items-center ">
+        <div className="mb-5 flex items-center">
           {isImageLeft && (
             <div className="bg-[#FB4444] h- md:h-6 w-14 absolute right-0" />
           )}
@@ -49,50 +92,29 @@ const OfferMealComponent = ({ isImageLeft }: { isImageLeft: boolean }) => {
           className="font-avenirBook2"
         >
           <CarouselContent>
-            <CarouselItem>
-              {[...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="flex w-full justify-between items-center mb-4"
-                >
-                  <div>
-                    <h3 className="text-lg">
-                      <span className="text-[#FB4444]">{index + 1}.</span>{" "}
-                      Yakutori Poulet
-                    </h3>
-                    <p className="text-sm text-[#FFFFFFB2]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+            {filteredMenu.length > 0 ? (
+              filteredMenu.map((meal: any) => (
+                <CarouselItem key={meal.id}>
+                  <div className="flex w-full justify-between items-center mb-4">
+                    <div>
+                      <h3 className="text-lg">
+                        <span className="text-[#FB4444]">{meal.id}.</span>{" "}
+                        {meal.name}
+                      </h3>
+                      <p className="text-sm text-[#FFFFFFB2]">
+                        {meal.description || "Description not available."}
+                      </p>
+                    </div>
+                    <div className="text-lg ml-4">{meal.price} $</div>
                   </div>
-                  <div className="text-lg ml-4">17$</div>
-                </div>
-              ))}
-            </CarouselItem>
-            <CarouselItem>
-              {[...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="flex w-full justify-between items-center mb-4"
-                >
-                  <div>
-                    <h3 className="text-lg">
-                      <span className="text-[#FB4444]">{index + 1}.</span>{" "}
-                      Yakutori Poulet
-                    </h3>
-                    <p className="text-sm text-[#FFFFFFB2]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                  <div className="text-lg ml-4">17$</div>
-                </div>
-              ))}
-            </CarouselItem>
+                </CarouselItem>
+              ))
+            ) : (
+              <p>LLoading menu...</p>
+            )}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:block hover:text-[#BE935A] text-[#BE935A]  border-none hover:bg-transparent bg-transparent  -left-16 top-28  [&_svg]:size-16" />
-
-          <CarouselNext className="hidden md:block hover:text-[#BE935A] text-[#BE935A]  border-none hover:bg-transparent bg-transparent -right-16 top-28 [&_svg]:size-16" />
-
-          {/*  */}
+          <CarouselPrevious className="hidden md:block hover:text-[#BE935A] text-[#BE935A] border-none hover:bg-transparent bg-transparent -left-16 top-28 [&_svg]:size-16" />
+          <CarouselNext className="hidden md:block hover:text-[#BE935A] text-[#BE935A] border-none hover:bg-transparent bg-transparent -right-16 top-28 [&_svg]:size-16" />
         </Carousel>
       </div>
     </div>

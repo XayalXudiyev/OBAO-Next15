@@ -23,3 +23,11 @@ export interface Category {
   id: number
   title: string
 }
+
+export interface OfferMeal {
+  id: number
+  name: string
+  description: string
+  price: number
+  category: string
+}

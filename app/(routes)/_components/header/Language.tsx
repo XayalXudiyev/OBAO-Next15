@@ -16,7 +16,42 @@ const Language = () => {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="en">EN</SelectItem>
+          <SelectItem value="en">
+            {" "}
+            <div className="flex gap-x-1">
+              <img
+                src="/language-logos/englishFlag.png"
+                width={25}
+                height={10}
+                alt=""
+              />{" "}
+              <span>English</span>
+            </div>
+          </SelectItem>
+          <SelectItem value="fr">
+            {" "}
+            <div className="flex gap-x-1">
+              <img
+                src="/language-logos/frenchFlag.png"
+                width={25}
+                height={10}
+                alt=""
+              />{" "}
+              French
+            </div>
+          </SelectItem>
+          <SelectItem value="dc">
+            {" "}
+            <div className="flex gap-x-1">
+              <img
+                src="/language-logos/dutchFlag.png"
+                width={25}
+                height={10}
+                alt=""
+              />{" "}
+              Dutch
+            </div>
+          </SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

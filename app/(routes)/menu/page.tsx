@@ -46,8 +46,8 @@ const FoodMenuPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold font-avenirMedium4 text-center mt-5 md:mt-20 md:mb-10">
             OUR OFFERINGS
           </h2>
-          {[1, 2, 3, 4].map((_, index) => (
-            <OfferMealComponent key={index} isImageLeft={index % 2 === 1} />
+          {[1,2].map((_, index) => (
+            <OfferMealComponent key={index} isImageLeft={index % 2 === 1} selectedCategory={clicked} />
           ))}
         </div>
       </div>

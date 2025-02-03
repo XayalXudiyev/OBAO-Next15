@@ -1,8 +1,8 @@
 import localFont from "next/font/local"
 
 import "./globals.css"
-import ClientProvider from "./ClientProvider"
 import { Toaster } from "@/components/ui/toaster"
+import ClientProvider from "./ClientProvider"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -65,3 +65,4 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   )
 }
+

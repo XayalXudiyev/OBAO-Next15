@@ -14,17 +14,22 @@ import { useEffect, useState } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
-const TopMealComponent = ({selectedCategory}: {selectedCategory: string}) => {
+
+const TopMealComponent = ({ selectedCategory }: { selectedCategory: string }) => {
     const [menu, setMenu] = useState<OfferMeal[]>([])
 
     const controlsLeft = useAnimation()
     const controlsRight = useAnimation()
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.6,
+        rootMargin: "-100px 0px",
+    })
 
     useEffect(() => {
         if (inView) {
-            controlsLeft.start({ x: 0, opacity: 1, transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] } })
-            controlsRight.start({ x: 0, opacity: 1, transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] } })
+            controlsLeft.start({ x: 0, opacity: 1, transition: { duration: 0.8, delay: 0.3, ease: [0.33, 1, 0.68, 1] } })
+            controlsRight.start({ x: 0, opacity: 1, transition: { duration: 0.8, delay: 0.3, ease: [0.33, 1, 0.68, 1] } })
         }
     }, [inView, controlsLeft, controlsRight])
 
@@ -62,7 +67,6 @@ const TopMealComponent = ({selectedCategory}: {selectedCategory: string}) => {
             ref={ref}
             className="flex md:px-16 flex-col items-center gap-6 md:gap-20 pt-4 md:pb-14 md:flex-row md:items-start"
         >
-            {/* Sol tərəf (Left) */}
             <motion.div
                 initial={{ x: -5000, opacity: 0 }}
                 animate={controlsLeft}
@@ -105,7 +109,6 @@ const TopMealComponent = ({selectedCategory}: {selectedCategory: string}) => {
                 </Carousel>
             </motion.div>
 
-            {/* Sağ tərəf (Right) */}
             <motion.div
                 initial={{ x: 5000, opacity: 0 }}
                 animate={controlsRight}

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 
+
 const DiscoverFlavors = () => {
     return (
         <div className=" bg-transparent mt-40">

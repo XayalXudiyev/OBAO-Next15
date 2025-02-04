@@ -6,20 +6,20 @@ const OurMenuComponent = () => {
   return (
     <div className="h-[25.7rem] w-full mx-auto relative flex flex-col justify-center items-center">
       <div>
-              <Image
-                src="/ourmenuleftimg.svg"
-                alt="hero"
-                width={80}
-                height={80}
-                className="absolute top-16 left-0"
-              />
-                   <Image
-                src="/ourmenurightimg.svg"
-                alt="hero"
-                width={80}
-                height={80}
-                className="absolute bottom-5 right-0"
-              />
+        <Image
+          src="/ourmenuleftimg.svg"
+          alt="hero"
+          width={80}
+          height={80}
+          className="absolute top-16 left-0"
+        />
+        <Image
+          src="/ourmenurightimg.svg"
+          alt="hero"
+          width={80}
+          height={80}
+          className="absolute bottom-5 right-0"
+        />
       </div>
       <div className="text-center w-4/5 space-y-10  md:mt-24">
         <h1 className="text-[#FB4444] text-3xl md:text-4xl font-bold font-avenirMedium4 text-center">
